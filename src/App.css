@@ -1,1 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.app {
+  background-image: url('./assets/sunny.jpg');
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4 ease-out;
+  min-height: 100vh;
+}
+
+.search-container {
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.search-button {
+  text-align: center;
+  padding: 5px;
+  box-shadow: -1px 3px rgba(0,0,0,0.2);
+}
+
+.searchbar {
+  width: 50%;
+  padding: 5px;
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 5px;
+  box-shadow: 1px 3px rgba(0,0,0,0.2);
+}
+
+.coords-button {
+  margin: 10px;
+  padding: 5px;
+  box-shadow: 0px 3px rgba(0,0,0,0.2);
+}
+
+.city-name {
+  color: rgb(255, 255, 255);
+  font-size: 32px;
+  margin-top: 40%;
+  text-align: center;
+  text-shadow: 2px 2px rgba(50,50,70,0.5);
+}
+
+.date {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  margin-top: 5%;
+  text-align: center;
+  text-shadow: 2px 2px rgba(50,50,70,0.5);
+}
+
+.temp {
+  color: rgb(255, 255, 255);
+  font-size: 72px;
+  margin-top: 5%;
+  text-align: center;
+  text-shadow: 2px 2px rgba(50,50,70,0.5);
+}
+
+.description {
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  margin-top: 10%;
+  text-align: center;
+  text-shadow: 2px 2px rgba(50,50,70,0.5);
+}

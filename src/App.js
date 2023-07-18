@@ -36,9 +36,9 @@ function App() {
           value={city}
         />
         <button className='search-button' onClick={searchCity}>Search</button>
-      </div>
-      <div>
-        <button className='coords-button' onClick={searchCoords}>Use my Location</button>
+        <div>
+          <button className='coords-button' onClick={searchCoords}>Use my Location</button>
+        </div>
       </div>
       <MainPage weatherData={weatherData} />
       {/* <DetailsPage weatherData={weatherData} /> */}
