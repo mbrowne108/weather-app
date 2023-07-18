@@ -9,6 +9,8 @@ const api = {
 
 function App() {
   const [city, setCity] = useState('')
+  const [lat, setLat] = useState(0)
+  const [lon, setLon] = useState(0)
   const [weatherData, setWeatherData] = useState([])
 
   const searchCity = () => {
@@ -22,7 +24,17 @@ function App() {
   }
 
   const searchCoords = () => {
-    console.log('Coords')
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((pos) => {
+        fetch(`${api.base}/weather?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&units=imperial&appid=${api.key}`)
+        .then(r => r.json())
+        .then(data => {
+          setWeatherData(data)
+          setCity('')
+          console.log(data)
+    })
+      })
+    }
   }
 
   return (
