@@ -9,8 +9,6 @@ const api = {
 
 function App() {
   const [city, setCity] = useState('')
-  const [lat, setLat] = useState(0)
-  const [lon, setLon] = useState(0)
   const [weatherData, setWeatherData] = useState([])
 
   const searchCity = () => {
