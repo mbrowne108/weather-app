@@ -13,9 +13,9 @@ export default function ({ weatherData }) {
     <div>
       <div>
         <h3 className='city-name'>{weatherData.name}</h3>
-        {weatherData.main ? <h5 className='date'>{date.toLocaleString('en-US', dateOptions)}</h5> : null}
-        {weatherData.main ? <h2 className='temp'>{weatherData.main.temp.toFixed()}°F</h2> : null}
-        {weatherData.weather ? <h4 className='description'>{weatherData.weather[0].main}</h4> : null}
+        {weatherData.main ? <p className='date'>{date.toLocaleString('en-US', dateOptions)}</p> : null}
+        {weatherData.main ? <p className='temp'>{weatherData.main.temp.toFixed()}°F</p> : null}
+        {weatherData.weather ? <p className='description'>{weatherData.weather[0].main}</p> : null}
       </div>
       <div className='details'>
         <div>

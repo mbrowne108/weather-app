@@ -45,12 +45,14 @@ function App() {
       setBkgimg('rain')
     } else if (data.weather[0].id >= 600 && data.weather[0].id < 700) {
       setBkgimg('snow')
+    } else if (data.weather[0].id >= 700 && data.weather[0].id < 800) {
+      setBkgimg('fog')
     } else if (data.weather[0].id === 800) {
       setBkgimg('clear')
     } else if (data.weather[0].id >= 800 && data.weather[0].id < 810) {
       setBkgimg('cloudy')
     } else {
-      setBkgimg('rain')
+      setBkgimg('clear')
     }
   }
 
