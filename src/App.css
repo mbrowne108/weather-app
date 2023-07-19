@@ -9,11 +9,30 @@ body {
 }
 
 .app {
-  background-image: url('./assets/sunny.jpg');
   background-size: cover;
   background-position: bottom;
   transition: 0.4 ease-out;
   min-height: 100vh;
+}
+
+.clear {
+  background-image: url('./assets/clear.jpg');
+}
+
+.thunderstorm {
+  background-image: url('./assets/thunder.jpg');
+}
+
+.rain {
+  background-image: url('./assets/rain.jpg');
+}
+
+.snow {
+  background-image: url('./assets/snow.jpeg');
+}
+
+.cloudy {
+  background-image: url('./assets/cloudy.jpg');
 }
 
 .search-container {
@@ -25,7 +44,7 @@ body {
 .search-button {
   text-align: center;
   padding: 5px;
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(255,255,255);
   border-radius: 5px;
   box-shadow: -1px 3px rgba(0,0,0,0.2);
 }
@@ -33,7 +52,7 @@ body {
 .searchbar {
   width: 200px;
   padding: 5px;
-  background-color: rgba(255,255,255,0.7);
+  background-color: rgba(255,255,255);
   border-radius: 5px;
   box-shadow: 1px 3px rgba(0,0,0,0.2);
 }
@@ -41,7 +60,7 @@ body {
 .coords-button {
   margin: 10px;
   padding: 5px;
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(255,255,255);
   border-radius: 5px;
   box-shadow: 0px 3px rgba(0,0,0,0.2);
 }

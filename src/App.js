@@ -10,6 +10,7 @@ const api = {
 function App() {
   const [city, setCity] = useState('')
   const [weatherData, setWeatherData] = useState([])
+  const [bkgimg, setBkgimg] = useState('clear')
 
   const searchCity = () => {
     fetch(`${api.base}/weather?q=${city}&units=imperial&appid=${api.key}`)
@@ -17,6 +18,7 @@ function App() {
     .then(data => {
       setWeatherData(data)
       setCity('')
+      setBackground(data)
       console.log(data)
     })
   }
@@ -29,14 +31,31 @@ function App() {
         .then(data => {
           setWeatherData(data)
           setCity('')
+          setBackground(data)
           console.log(data)
     })
       })
     }
   }
 
+  const setBackground = (data) => {
+    if (data.weather[0].id >= 200 && data.weather[0].id < 300) {
+      setBkgimg('thunderstorm')
+    } else if (data.weather[0].id >= 300 && data.weather[0].id < 600) {
+      setBkgimg('rain')
+    } else if (data.weather[0].id >= 600 && data.weather[0].id < 700) {
+      setBkgimg('snow')
+    } else if (data.weather[0].id === 800) {
+      setBkgimg('clear')
+    } else if (data.weather[0].id >= 800 && data.weather[0].id < 810) {
+      setBkgimg('cloudy')
+    } else {
+      setBkgimg('rain')
+    }
+  }
+
   return (
-    <div className="app">
+    <div className={`app ${bkgimg}`}>
       <div className='search-container'>
         <input
           type='text'
